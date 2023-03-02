@@ -1,0 +1,16 @@
+.skills{
+    height: 200px;
+    background-color: red;
+}
+.skills {
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+}
+/* .skill__button{
+    background-color: white;
+}
+.dark{
+    background-color: black;
+    color:white;
+} */

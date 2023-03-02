@@ -1,0 +1,40 @@
+.player{
+    padding: 20px;
+    margin: 20px;
+    height: auto;
+    width: 45%;
+    background-image: linear-gradient(to bottom, rgb(45, 43, 43), rgb(62, 55, 55));
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content:flex-start;
+}
+.enemy{
+    margin: 20px;
+    padding: 20px;
+    height: auto;
+    width: 45%;
+    background-image: linear-gradient(to bottom, rgb(40, 49, 52), rgb(54, 69, 74));
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+}
+.player__name{
+    /* Definir un gradiente de fondo en un elemento de texto */
+    background: linear-gradient(to bottom, #ffffff, #0cb606);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.enemy__name{
+    background: linear-gradient(to bottom, #ffffff, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
