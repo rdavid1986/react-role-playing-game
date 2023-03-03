@@ -1,10 +1,19 @@
 import React from "react";
 import UseSkills from "./PlayerSkills.jsx"
 import BasicAtk from "./BasicAtk.jsx";
+import Cure from "./Cure.jsx";
 import "../css/playerEnemy.css";
 import "../css/bars.css";
 
-function Player({player, enemy, skills, setPlayerHp, setPlayerMp, setEnemyHp, setEnemyMp}){
+function Player({
+        player, 
+        enemy, 
+        skills, 
+        setPlayerHp, 
+        setPlayerMp, 
+        setEnemyHp, 
+        setEnemyMp
+    }){
 
     
 
@@ -26,8 +35,27 @@ function Player({player, enemy, skills, setPlayerHp, setPlayerMp, setEnemyHp, se
                     </div>
                 </div>
                 <div>
-                    <BasicAtk player={player} enemy={enemy} setPlayerHp={setPlayerHp} setEnemyHp={setEnemyHp} setEnemyMp={setEnemyMp}/>
-                    <UseSkills player={player} enemy={enemy} skills={skills} setPlayerMp={setPlayerMp} setPlayerHp={setPlayerHp} setEnemyHp={setEnemyHp}/>
+                    <BasicAtk 
+                    player={player} 
+                    enemy={enemy} 
+                    setPlayerHp={setPlayerHp} 
+                    setPlayerMp={setPlayerMp}
+                    setEnemyHp={setEnemyHp} 
+                    setEnemyMp={setEnemyMp}
+                    />
+                    <Cure 
+                    player={player}
+                    setPlayerHp={setPlayerHp}
+                    setPlayerMp={setPlayerMp}
+                    />
+                    <UseSkills 
+                    player={player} 
+                    enemy={enemy} 
+                    skills={skills} 
+                    setPlayerMp={setPlayerMp} 
+                    setPlayerHp={setPlayerHp} 
+                    setEnemyHp={setEnemyHp}
+                    />
                 </div>
             </div>
     );

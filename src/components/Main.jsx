@@ -1,6 +1,7 @@
 import React, {useState, useEffect}  from "react";
 import Player from "./Player.jsx";
 import Enemy from "./Enemy.jsx";
+
 import {player, enemy, skills} from "../data/playerEnemyData.js";
 
 import "../css/main.css";
@@ -25,8 +26,17 @@ function Main(){
 
     return(
         <main className="main" id="main">
-            <Player player={player} skills={skills} enemy={enemy} setPlayerHp={setPlayerHp} setPlayerMp={setPlayerMp} setEnemyHp={setEnemyHp} setEnemyMp={setEnemyMp}/>
-            <Enemy enemy={enemy} setEnemyHp={setEnemyHp} setEnemyMp={setEnemyMp}/>
+            <Player 
+            player={player} 
+            skills={skills} 
+            enemy={enemy} 
+            setPlayerHp={setPlayerHp} 
+            setPlayerMp={setPlayerMp} 
+            setEnemyHp={setEnemyHp} 
+            setEnemyMp={setEnemyMp}/>
+            <Enemy enemy={enemy} 
+            setEnemyHp={setEnemyHp} 
+            setEnemyMp={setEnemyMp}/>
         </main>
     );
 }

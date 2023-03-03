@@ -1,6 +1,12 @@
 import React from "react";
 
-function BasicAtk({player, enemy, setPlayerHp, setEnemyHp}){
+function BasicAtk({
+                player, 
+                enemy, 
+                setPlayerHp, 
+                setEnemyHp,
+                setPlayerMp
+            }){
     
 
     function basicAttack(){
@@ -8,6 +14,9 @@ function BasicAtk({player, enemy, setPlayerHp, setEnemyHp}){
         console.log(player.hp + " hp player");
         enemy.hp-=player.atk;
         player.hp-=enemy.atk;
+        const mpExact = player.mp+=player.atk/2;
+        const mpRounded = Math.round(mpExact*100) / 100;
+        setPlayerMp(mpRounded);
         if(enemy.hp <=0){
             enemy.hp=0;
             console.log(enemy.hp);
@@ -22,6 +31,7 @@ function BasicAtk({player, enemy, setPlayerHp, setEnemyHp}){
         }
         console.log(player.hp + " es la vida actual")
         setPlayerHp(player.hp);
+        
         setEnemyHp(enemy.hp);
     }
     
